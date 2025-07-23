@@ -1,0 +1,58 @@
+==============================
+🔍 Python Port Scanner Tool
+==============================
+
+Description:
+------------
+This is a fast, multithreaded TCP port scanner written in Python. The tool scans a target IP address or domain for open ports in a specified range and attempts to grab service banners from those ports. It also saves the scan results in a structured JSON file for further analysis or integration with other tools.
+
+Key Features:
+-------------
+- Multithreaded port scanning for speed
+- Banner grabbing to identify services running on open ports
+- Saves scan results to a JSON file (e.g., scan_results.json)
+- Simple command-line interface (CLI)
+- Educational and beginner-friendly codebase
+
+How It Works:
+-------------
+1. Accepts a target host and port range via command-line arguments.
+2. Launches multiple threads to scan TCP ports concurrently.
+3. For each open port found, attempts to grab a banner (if the service responds).
+4. Displays open ports and banners in the terminal.
+5. Saves the results (open ports + banner info) in JSON format.
+
+Example Usage:
+--------------
+python port_scanner.py -t scanme.nmap.org -p 20-100
+
+This will scan ports 20 through 100 on "scanme.nmap.org" and store the output in "scan_results.json".
+
+Output Format (JSON):
+---------------------
+The tool creates a file named "scan_results.json" with content like:
+
+[
+  {
+    "port": 22,
+    "status": "open",
+    "banner": "SSH-2.0-OpenSSH_7.4"
+  },
+  {
+    "port": 80,
+    "status": "open",
+    "banner": "HTTP/1.1 200 OK"
+  }
+]
+
+Disclaimer:
+-----------
+This tool is intended strictly for educational and authorized use. Do not use it to scan systems or networks without explicit permission. Unauthorized scanning is illegal and unethical.
+
+Author:
+-------
+Yogesh — GitHub: https://github.com/YOGESH-2005
+
+License:
+--------
+MIT License

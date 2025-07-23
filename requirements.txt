@@ -1,0 +1,9 @@
+# No external libraries needed; uses only Python's standard library.
+# This file is provided for clarity or future expansion.
+
+
+# Current version uses only standard Python libraries.
+# Below are optional libraries for enhancements.
+
+1.colorama  # for colored terminal output
+2.requests  # for deeper service checks or web port interaction
